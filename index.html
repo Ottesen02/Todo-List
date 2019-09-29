@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Raleway|Varela+Round&display=swap" rel="stylesheet" />
+    <title>TODO List</title>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+    <div class="grid2">
+      <form action="" class="task-form">
+        <div class="grid">
+          <div class="topborder"></div>
+          <legend>Add a new task to the list</legend>
+          <label for="task"> Task </label>
+          <input type="text" name="task" id="task" maxlength="20" required placeholder="What Do I Need To Do" />
+
+          <label for="deadline"> Deadline </label>
+          <input type="date" name="deadline" id="deadline" />
+
+          <label for="category"> Category </label>
+          <select name="category" id="category">
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="Home">Home</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <!-- <label for="important">
+          Important
+          <input type="checkbox" id="important" name="important" value="Important" />
+        </label> -->
+          <button id="submit" class="addTodo" type="submit" value="submit" name="submit">Add to list</button>
+        </div>
+      </form>
+      <div class="list-container">
+        <div class="headings">
+          <article>
+            <div class="task-cat-heading">
+              <p class="task-heading">Task</p>
+              <p class="category-heading">Category</p>
+            </div>
+            <p class="status-heading">Status</p>
+            <p class="deadline-heading">Deadline</p>
+            <p class="delete-heading">Delete</p>
+          </article>
+        </div>
+        <div class="overflow">
+          <section class="todo-list"></section>
+        </div>
+      </div>
+    </div>
+    <template>
+      <article>
+        <div class="task-cat">
+          <h2 class="task"></h2>
+          <p class="category"></p>
+        </div>
+        <form action="" class="status-form">
+          <label for="status">
+            <select name="status" id="status">
+              <option value="not-started">Not Started</option>
+              <option value="in-progress">In Progress</option>
+              <option value="stuck">Stuck</option>
+              <option value="done">Done</option>
+            </select>
+          </label>
+        </form>
+        <h3 class="deadline"></h3>
+
+        <!-- <p class="important"></p> -->
+        <button class="deleteTodo"><img class="trash" src="recycling-bin.svg" alt="Delete Todo" /></button>
+      </article>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
